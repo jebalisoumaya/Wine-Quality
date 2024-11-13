@@ -5,44 +5,32 @@ The objective is to classify the wines into three categories: Low, Medium, and H
 
 
 2/ Dataset
-The dataset used in this project is the Wine Quality Dataset (WineQT.csv). It contains the following features:
+The dataset used in this project is the Wine Quality Dataset (WineQT.csv).
 
-Fixed Acidity: Amount of fixed acids in the wine.
-Volatile Acidity: Amount of volatile acids (e.g., acetic acid).
-Citric Acid: Presence of citric acid.
-Residual Sugar: Amount of sugar left after fermentation.
-Chlorides: Amount of salt content in the wine.
-Free Sulfur Dioxide: Free SO₂ level.
-Total Sulfur Dioxide: Total SO₂ level.
-Density: The wine's density.
-pH: pH level of the wine.
-Sulphates: Amount of sulphates.
-Alcohol: Alcohol content percentage.
-Quality (Target variable): Rating of the wine's quality.
 The quality column contains a score ranging from 0 to 10, which is converted into three categories for classification:
 
-Low (0): For quality <= 4
-Medium (1): For quality between 5 and 6
-High (2): For quality > 6
+* Low (0): For quality <= 4 
+* Medium (1): For quality between 5 and 6
+* High (2): For quality > 6
 3/ Code Overview
 The code follows these main steps:
 
-Data Exploration and Preprocessing:
-Load the Dataset: The dataset is loaded into a Pandas DataFrame.
-Display Basic Information: Basic statistics are displayed, including the first few rows of data, data types, and summary statistics.
-Check for Missing Values and Duplicates: Ensure the dataset is clean by checking for any missing values or duplicate entries.
-Calculate the Correlation Matrix: Identify key features most correlated with the target variable (quality).
-Model Building:
-Feature Selection: Based on the correlation matrix, the most important features related to wine quality are selected for training the model.
-Categorize Quality: Convert the continuous quality ratings into three categories: Low, Medium, and High.
-Train-Test Split: Split the data into training and testing sets using train_test_split.
-Model Training: A Decision Tree Classifier is trained with a maximum depth of 3 and a minimum sample leaf of 5.
-Model Evaluation:
+* Data Exploration and Preprocessing:
+* Load the Dataset: The dataset is loaded into a Pandas DataFrame.
+* Display Basic Information: Basic statistics are displayed, including the first few rows of data, data types, and summary statistics.
+* Check for Missing Values and Duplicates: Ensure the dataset is clean by checking for any missing values or duplicate entries.
+* Calculate the Correlation Matrix: Identify key features most correlated with the target variable (quality).
+4/ Model Building:
+* Feature Selection: Based on the correlation matrix, the most important features related to wine quality are selected for training the model.
+* Categorize Quality: Convert the continuous quality ratings into three categories: Low, Medium, and High.
+* Train-Test Split: Split the data into training and testing sets using train_test_split.
+* Model Training: A Decision Tree Classifier is trained with a maximum depth of 3 and a minimum sample leaf of 5.
+* Model Evaluation:
 Accuracy: Evaluate the model using accuracy, which measures the percentage of correct predictions.
 Confusion Matrix: Display a confusion matrix to visualize the performance of the model across the different wine quality categories.
 Classification Report: Generate a classification report that includes precision, recall, and F1-score for each class (Low, Medium, High).
-Visualization:
-Visualize the Decision Tree: The trained decision tree is visualized using plot_tree to provide insights into the decision-making process and the feature importance.
+6/ Visualization:
+* Visualize the Decision Tree: The trained decision tree is visualized using plot_tree to provide insights into the decision-making process and the feature importance.
 
 
 The  accuracy of the Decision Tree classifier is 84.84%, which means that the model is correctly predicting the wine quality category about 85% of the time.
