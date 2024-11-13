@@ -41,7 +41,13 @@ Classification Report: Generate a classification report that includes precision,
 
 6/ Visualization:
 * Visualize the Decision Tree: The trained decision tree is visualized using plot_tree to provide insights into the decision-making process and the feature importance.
+![image](https://github.com/user-attachments/assets/df152cf0-21f7-493c-86bd-871a6eea7853)
 
+The decision tree uses Gini Impurity to find splits that make each node more homogeneous with respect to wine quality. By progressively reducing impurity at each level
+
+The first decision point in the tree usually corresponds to the most influential feature ; here its Alcohol
+
+As you move down the tree, the remaining features (such as Volatile Acidity, Citric Acid, Sulphates, and Fixed Acidity) are used to further partition the data .
 
 The  accuracy of the Decision Tree classifier is 84.84%, which means that the model is correctly predicting the wine quality category about 85% of the time.
 However, the confusion matrix and classification report indicate areas for improvement, particularly in the prediction of some classes.
