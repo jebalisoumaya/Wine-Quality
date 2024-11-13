@@ -23,7 +23,17 @@ The code follows these main steps:
 * Display Basic Information: Basic statistics are displayed, including the first few rows of data, data types, and summary statistics.
 * Check for Missing Values and Duplicates: Ensure the dataset is clean by checking for any missing values or duplicate entries.
 * Calculate the Correlation Matrix: Identify key features most correlated with the target variable (quality).
-* 
+
+  ![image](https://github.com/user-attachments/assets/35f227e9-6720-4359-bed6-f37ed5d7e45c)
+
+  From the correlation matrix, we  selected features with strong correlations with 'quality':
+Alcohol (0.48)
+Volatile Acidity (-0.41)
+Citric Acid (0.24)
+Sulphates (0.26)
+Fixed Acidity (0.12)
+
+  
 4/ Model Building:
 
 * Feature Selection: Based on the correlation matrix, the most important features related to wine quality are selected for training the model.
